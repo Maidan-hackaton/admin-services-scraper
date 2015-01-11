@@ -1,0 +1,1224 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>
+	
+    Реєстр послуг
+
+</title>
+    <link href="/Content/body.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/btns.css" rel="stylesheet" type="text/css" />
+
+    <script src="/Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/cust/Helper.js" type="text/javascript"></script>
+    <script src="/Scripts/cust/Dialogs.js" type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    
+    <meta name='title' content='Фізичні особи' />
+    <meta name='description' content='Єдиний державний портал адміністративних послуг, реєстр адміністративних послуг' />
+    <meta property='og:title' content='Фізичні особи' />
+    <meta property='og:description' content='Єдиний державний портал адміністративних послуг, реєстр адміністративних послуг' />
+    <meta property='og:image' content='/Content/i/logo.png' />
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $('.btnFacebook')
+                .attr('href', 'http://www.facebook.com/sharer.php'
+                    + '?u=' + document.URL
+                    + '&t=' + encodeURI('Фізичні особи'))
+                .bind('click', function () {
+                    var popUp = window.open('http://www.facebook.com/sharer.php' + '?u=' + document.URL + '&t=' + encodeURI('Фізичні особи'),
+                        'popupwindow', 'scrollbars=yes,width=800,height=400');
+                    popUp.focus();
+                    return false;
+                });
+
+            $('.btnTwitter')
+                .attr('href', 'https://twitter.com/intent/tweet'
+                    + '?original_referer=' + document.URL
+                    + '&text=' + encodeURI('Фізичні особи')
+                    + '&lang=uk'
+                    + '&url=' + document.URL)
+                .bind('click', function () {
+                    var popUp = window.open('https://twitter.com/intent/tweet'
+                        + '?original_referer=' + document.URL
+                        + '&text=' + encodeURI('Фізичні особи')
+                        + '&lang=uk'
+                        + '&url=' + document.URL,
+                        'popupwindow', 'scrollbars=yes,width=800,height=400');
+                    popUp.focus();
+                    return false;
+                });
+
+            $('.btnGoogle')
+                .attr('href', 'https://plus.google.com/share?hl=uk&url=' + encodeURI(document.URL))
+                .bind('click', function () {
+                    var popUp = window.open('https://plus.google.com/share?hl=uk&url=' + document.URL, 'popupwindow', 'scrollbars=yes,width=800,height=400');
+                    popUp.focus();
+                    return false;
+                });
+        });
+    </script>
+    
+    <style type="text/css">
+        .flow {overflow-x:hidden;}
+        #flowscrlble {float:left;min-height:260px;height:auto;}
+        .menu_scrolling {padding: 12px 20px 8px 20px;}
+        .scrolling_line {height: 8px;background: url(/Content/i/scrolling_line.gif) repeat-x;}
+        .scrolling_line img { position: relative; padding-right: 45px; }/*background: url(/Content/i/toddler_r.gif) no-repeat 100% 0;*/
+        
+
+        
+        .tit {width:100%;}
+        
+        .emain {width:230px;height:80px;margin:5px 0 0 0;padding:10px;
+                display:table;vertical-align:middle;}
+        .ecell {display:table-cell;vertical-align:middle;}
+        .econtent {width:230px;margin:0 auto;display: block;position:relative;}
+        .econtentShort {width:230px;margin:0 auto;display: block;position:relative;text-align:center;font-size:16px;}
+        
+        .bgCrl {background-color:#DA5638;}
+        .bgBlue {background-color:#00AEDD;}
+        .bgGrn {background-color:#67C111;}
+        .bgPrpl {background-color:#A500CF;}
+        .bgOrng {background-color:#EB7126;}
+
+        #withscript {width: 900px;min-height: 260px;padding:0;margin:0;text-align: left;overflow-x: scroll;overflow-y: hidden;}
+        #myScrollBar{position: absolute; width: 900px;height: 30px;}
+        .myScrollBarBtns {float:left;width:30px;height:30px;padding:0;
+            border: none;
+            cursor: pointer;}
+        .myScrollL {background: url(/Content/i/btnScrlL.png) no-repeat top left transparent;}
+        .myScrollR {background: url(/Content/i/btnScrlR.png) no-repeat top left transparent;}
+        #myScrollTrack {float:left;height:30px;padding:0;margin:0 5px;
+            background: url(/Content/i/hTracker1x4.gif) repeat-x scroll 0 13px transparent;}
+        .drag { position: relative;width: 200px;height: 30px;left: 0;
+            background: url(/Content/i/hScroller1x4.gif) repeat-x scroll 0 13px transparent;
+            cursor: pointer;}
+
+        .transferer {float:right;margin-right: 10px;padding:5px 10px;background-color:#00AEDD;}
+        .transferer a { font-size: 14px;float: left;}
+        .transferer:hover {background-color:#41C1E6;}
+    </style>
+</head>
+
+<body>
+    
+
+        
+ 
+<div style="width:0px;height:0px;position: absolute; top: 80px; left: 0;overflow:hidden; ">
+    <iframe  width="0" height="0 " frameborder="0"
+            src="/Statistics/GetStats?id=8903dcff-87ce-494f-8691-8fe2e940e1a0&controllerName=AdminService&section=List">
+    </iframe>
+</div>
+
+
+    <div class="container">
+        <div class="header">
+             <div class="underDev">
+                 Портал знаходиться в процесі розробки та тестування
+             </div>
+            <a class="headerTitle" href="/">
+                <h2>
+                    Єдиний державний портал адміністративних послуг
+                </h2>
+            </a>
+
+            
+        </div>
+    </div>
+
+    <div class="topDvdr">
+        <div class="topMenu">
+            <form action="/Home/Back" method="post">
+    <input type="submit" class="btnBack" value="" />
+</form>
+            <ul class="mItems">
+                <li>
+                    <a href="/">Меню</a>
+                </li>
+                
+
+                
+                
+                <li>
+                    <script type="text/javascript" language="javascript">
+                        $(document).ready(function () {
+                            InitSearchControls();
+                        });
+                    </script>
+                    <form action="/Search/Light" class="mSearch" method="post">
+                    <input type="text" name="criteria" class="txt" value=""/>
+                    <input type="submit" value="знайти" class="gBtn" />
+                    </form>
+                </li>
+                
+                
+                
+
+                
+            </ul>
+
+            <ul class="maItems">
+                
+                
+                <li>
+                    <a class="btnFacebook" title="Опублікувати в Facebook" target="_blank" rel="nofollow"></a>
+                </li>
+                <li>
+                    <a class="btnTwitter" title="Опублікувати в Twitter" target="_blank" rel="nofollow"></a>
+                </li>
+                <li>
+                    <a class="btnGoogle" title="Опублікувати в Google" target="_blank" rel="nofollow"></a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="cl"></div>
+
+    
+<div class="flow">
+
+    <div class="tit">
+        <div class="transferer">
+            <a href="/AdminService/ListByType">за категоріями послуг</a>
+        </div>
+        
+
+        Фізичні особи
+        (за категоріями отримувачів)
+    </div>
+
+    <div id="withscript">
+        <div id="flowscrlble" style="width:12760px;">
+            <div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6795336a-7b05-4788-af8b-c8aa5e7ef76f' title='Бронювання житла та видача охоронних свідоцтв (броні)'>
+                    <span class='econtent'>
+                        Бронювання житла та видача охоронних свідоцтв (броні)
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=097bef60-66af-4bef-b0d0-0602297bbc39' title='Будівельний паспорт забудови земельної ділянки.'>
+                    <span class='econtent'>
+                        Будівельний паспорт забудови земельної ділянки.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=039c89c2-5fb6-4950-a48d-b8fc7f29c9d6' title='Видача «Посвідчення жертви нацистських переслідувань»'>
+                    <span class='econtent'>
+                        Видача «Посвідчення жертви нацистських переслідувань»
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=de169fdc-e3e6-4b29-931e-2a202dd442a3' title='Видача висновку про доцільність усиновлення дитини дружини (чоловіка) та відповідність його інтересам дитини.'>
+                    <span class='econtent'>
+                        Видача висновку про доцільність усиновлення дитини дружини (чоловіка) та відповідність його інтереса...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=958a5f56-3ab2-4b9e-b14d-1a09903dfc41' title='Видача витягів з автоматизованої системи ведення земельного кадастру'>
+                    <span class='econtent'>
+                        Видача витягів з автоматизованої системи ведення земельного кадастру
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4129cbb8-999c-4838-8380-bdcc82a57424' title='Видача витягів з книг реєстрації документів, що посвідчують право власності чи користування (оренди) земельними ділянками.'>
+                    <span class='econtent'>
+                        Видача витягів з книг реєстрації документів, що посвідчують право власності чи користування (оренди)...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=2dd9c860-56c8-464c-b0de-b0605f40450d' title='Видача державного номерного знака'>
+                    <span class='econtent'>
+                        Видача державного номерного знака
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=71d7b8d9-0bd7-418a-9cd3-0deffc9f12ec' title='Видача довідки з питань реєстрації,перереєстрації, відчуження машин у випадках передбачених законодавством'>
+                    <span class='econtent'>
+                        Видача довідки з питань реєстрації,перереєстрації, відчуження машин у випадках передбачених законода...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e7e0787f-c008-425a-a0a0-005a0a7f29b5' title='Видача довідки про компенсаційні виплати батькам на дітей, які постраждали внаслідок Чорнобильської катастрофи'>
+                    <span class='econtent'>
+                        Видача довідки про компенсаційні виплати батькам на дітей, які постраждали внаслідок Чорнобильської ...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=3cde711a-623c-48d1-98e0-dcc1f8da1dfd' title='Видача довідки про перебування на квартирному обліку.'>
+                    <span class='econtent'>
+                        Видача довідки про перебування на квартирному обліку.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=a59bb160-cd89-4e47-967c-6815ad7d8bd6' title='Видача довідки про перебування у списках бажаючих прийняти участь у програмах «Доступне житло» 50/50, 60/40, 70/30.'>
+                    <span class='econtent'>
+                        Видача довідки про перебування у списках бажаючих прийняти участь у програмах «Доступне житло» 50/50...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=9f957e31-981d-4a0d-aa2e-e1a8af853769' title='Видача довідки про участь в приватизації житла державного житлового фонду.'>
+                    <span class='econtent'>
+                        Видача довідки про участь в приватизації житла державного житлового фонду.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=db8c9f8a-b156-43d2-8b8e-0e1834eb41bd' title='Видача довідок про відсутність громадян на квартирному обліку'>
+                    <span class='econtent'>
+                        Видача довідок про відсутність громадян на квартирному обліку
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=03c885ce-7d84-406b-ae03-1c1ccdbca617' title='Видача довідок про відсутність громадян на обліку, які бажають вступити до житлово-будівельного кооперативу'>
+                    <span class='econtent'>
+                        Видача довідок про відсутність громадян на обліку, які бажають вступити до житлово-будівельного кооп...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=74114cca-6856-4ed7-a9b3-853e4e094275' title='Видача довідок про наявність (відсутність) рішення суду визнання особи недієздатною або обмежено дієздатною, яка призначається на посаду професійного судді вперше'>
+                    <span class='econtent'>
+                        Видача довідок про наявність (відсутність) рішення суду визнання особи недієздатною або обмежено діє...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=8dd202ea-9326-4d2d-9735-807e5c2d9346' title='Видача довідок про наявність або відсутність заброньованого жилого приміщення'>
+                    <span class='econtent'>
+                        Видача довідок про наявність або відсутність заброньованого жилого приміщення
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=32a7ffd2-6933-4e03-b33f-c712d81796d3' title='Видача довідок про наявність земельних ділянок у власності, користуванні чи оренді.'>
+                    <span class='econtent'>
+                        Видача довідок про наявність земельних ділянок у власності, користуванні чи оренді.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=2fae337a-912d-4021-ae3c-eca087e43c53' title='Видача довідок про перебування громадян на квартирному обліку'>
+                    <span class='econtent'>
+                        Видача довідок про перебування громадян на квартирному обліку
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=daaf7cc1-fe23-4f0e-afc1-000c5ea4c5d1' title='Видача довідок про перебування громадян на квартирному та кооперативному обліку на участь у програмі Доступне житло'>
+                    <span class='econtent'>
+                        Видача довідок про перебування громадян на квартирному та кооперативному обліку на участь у програмі...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6486d406-b9f6-4d25-803f-ccc298340347' title='Видача довідок про перебування на обліку громадян, які бажають вступити до житлово-будівельного кооперативу'>
+                    <span class='econtent'>
+                        Видача довідок про перебування на обліку громадян, які бажають вступити до житлово-будівельного кооп...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=9e603043-38ff-4518-963f-e2a53ff90f8a' title='Видача дубліката свідоцтва про право власності на житло.'>
+                    <span class='econtent'>
+                        Видача дубліката свідоцтва про право власності на житло.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=7a78082c-4d35-4903-8569-63ee6134c371' title='Видача замість втрачених або таких, що стали непридатними державного номерного знака'>
+                    <span class='econtent'>
+                        Видача замість втрачених або таких, що стали непридатними державного номерного знака
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6cf6e1a2-be6b-4dda-9a67-6b7ea68e1848' title='Видача замість втрачених або таких, що стали непридатними номерного знака «Транзит»'>
+                    <span class='econtent'>
+                        Видача замість втрачених або таких, що стали непридатними номерного знака «Транзит»
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=555eb8cc-5a85-464e-b6bc-b74b0612d706' title='Видача замість втрачених або таких, що стали непридатними посвідчення тракториста-машиніста.'>
+                    <span class='econtent'>
+                        Видача замість втрачених або таких, що стали непридатними посвідчення тракториста-машиніста.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=f7d412d3-4e68-47a5-a815-fcdc22d639fa' title='Видача замість втрачених або таких, що стали непридатними свідоцтва про реєстрацію машини.'>
+                    <span class='econtent'>
+                        Видача замість втрачених або таких, що стали непридатними свідоцтва про реєстрацію машини.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=cd45bd02-e2d1-40e7-a492-b7b80a2b4e16' title='Видача картки платника податків та внесення до паспорта громадянина України даних про реєстраційний номер облікової картки платника податків з Державного реєстру фізичних осіб-платників податків'>
+                    <span class='econtent'>
+                        Видача картки платника податків та внесення до паспорта громадянина України даних про реєстраційний ...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=749fde38-f76a-4db9-91a3-bc94cd474301' title='Видача копії розпорядження про призначення управителя та затвердження договору про управління майном, що використовується у підприємницькій діяльності та стало власністю дитини'>
+                    <span class='econtent'>
+                        Видача копії розпорядження про призначення управителя та затвердження договору про управління майном...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=060ffb3c-2351-4b4b-be7e-1d864c64671e' title='Видача направлень на виготовлення технічних та інших засобів реабілітації'>
+                    <span class='econtent'>
+                        Видача направлень на виготовлення технічних та інших засобів реабілітації
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=211714c6-e08a-46f1-94d9-9f75d3fdaaab' title='Видача номерного знака "Транзит"'>
+                    <span class='econtent'>
+                        Видача номерного знака "Транзит"
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=59df9811-2c50-44d1-9244-f7661f3bf2d8' title='Видача номерного знака «Транзит»'>
+                    <span class='econtent'>
+                        Видача номерного знака «Транзит»
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d03b9cfc-1b76-449b-b3fb-4df824f33194' title='Видача номерного знака, дубліката свідоцтва про реєстрацію машини, посвідчення тракториста-машиніста, талона попереджень замість втрачених або таких, що стали непридатними'>
+                    <span class='econtent'>
+                        Видача номерного знака, дубліката свідоцтва про реєстрацію машини, посвідчення тракториста-машиніста...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4e81753a-780c-456d-8161-e3f35e40d559' title='Видача ордерів'>
+                    <span class='econtent'>
+                        Видача ордерів
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=118b4d46-b671-4e79-bd49-a1a584e1a073' title='Видача ордеру на житлову та службову житлову площу.'>
+                    <span class='econtent'>
+                        Видача ордеру на житлову та службову житлову площу.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=38bf0a1a-90eb-4785-bd0e-4ec6accbc004' title='Видача погодження про зняття з реєстрації підопічного'>
+                    <span class='econtent'>
+                        Видача погодження про зняття з реєстрації підопічного
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=ea99f02e-314e-4eef-82bf-56dac6e332d9' title='Видача посвідчення «Інвалід війни»'>
+                    <span class='econtent'>
+                        Видача посвідчення «Інвалід війни»
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=ab301cdd-05ef-40cd-9a50-7401dc9fe983' title='Видача посвідчення «Учасник війни»'>
+                    <span class='econtent'>
+                        Видача посвідчення «Учасник війни»
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=b5ff2a9c-1c65-4610-be6a-3e6c714e4790' title='Видача посвідчення «Член сім'ї загиблого»'>
+                    <span class='econtent'>
+                        Видача посвідчення «Член сім'ї загиблого»
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=b7ac50a7-2f29-4b34-a69a-a36e2e0eb022' title='Видача посвідчення опікуна або піклувальника'>
+                    <span class='econtent'>
+                        Видача посвідчення опікуна або піклувальника
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e5065d70-5927-4b03-bf06-1642b1588efc' title='Видача посвідчення особам, які постраждали внаслідок Чорнобильської катастрофи'>
+                    <span class='econtent'>
+                        Видача посвідчення особам, які постраждали внаслідок Чорнобильської катастрофи
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e412bf43-d0ba-46dd-bce1-af57fa85ebaf' title='Видача посвідчення тракториста-машиніста'>
+                    <span class='econtent'>
+                        Видача посвідчення тракториста-машиніста
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d4ce808a-ac65-44f9-b828-0abbb91fc493' title='Видача посвідчень батьків та дитини з багатодітної сім’ї.'>
+                    <span class='econtent'>
+                        Видача посвідчень батьків та дитини з багатодітної сім’ї.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=9198704f-dad6-4b97-87ea-d88ecc69aa41' title='Видача розпоряджень про приватизацію житла на підставі заяв громадян, які виявили бажання приватизувати займане житло'>
+                    <span class='econtent'>
+                        Видача розпоряджень про приватизацію житла на підставі заяв громадян, які виявили бажання приватизув...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=75d206f8-7b69-4868-9405-0c021fff3474' title='Видача свідоцтв про право власності на житло'>
+                    <span class='econtent'>
+                        Видача свідоцтв про право власності на житло
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=85b0e584-f493-485c-91c0-6ce90c1b837c' title='Видача свідоцтва на право вивезення (тимчасового вивезення) культурних цінностей з території України.'>
+                    <span class='econtent'>
+                        Видача свідоцтва на право вивезення (тимчасового вивезення) культурних цінностей з території України...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d5533d2e-1141-4415-b3c3-51458d2ef832' title='Видача свідоцтва про право власності на житло.'>
+                    <span class='econtent'>
+                        Видача свідоцтва про право власності на житло.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=64aef0d5-1cd3-4a88-bfa7-6976f96cf9ca' title='Видача свідоцтва про право власності на нерухоме майно'>
+                    <span class='econtent'>
+                        Видача свідоцтва про право власності на нерухоме майно
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=a66f5f3e-6bf2-4f2b-b821-082c6c091b5d' title='Видача свідоцтва про реєстрацію машини'>
+                    <span class='econtent'>
+                        Видача свідоцтва про реєстрацію машини
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=a14e452e-5600-4997-a711-bd90e0bd72e2' title='Видача талона попереджень до посвідчення тракториста-машиніста'>
+                    <span class='econtent'>
+                        Видача талона попереджень до посвідчення тракториста-машиніста
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=1f8c4dca-8783-4f17-bb01-7887afbb03d5' title='Видача талона про проходження державного технічного огляду'>
+                    <span class='econtent'>
+                        Видача талона про проходження державного технічного огляду
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=51e6dc00-d8e4-4609-95e7-52524dd8f986' title='Визначення відповідності вимогам навчальних програм матеріально-технічної бази навчального закладу з підготовки трактористів-машиністів та реєстрація навчальних класів і груп з їх підготовки.'>
+                    <span class='econtent'>
+                        Визначення відповідності вимогам навчальних програм матеріально-технічної бази навчального закладу з...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=79e799a0-fd8c-413b-b8f0-f91ae5c9f264' title='Визначення імені та/або прізвища дитини, яка знайдена, покинута в пологовому будинку, іншому закладі охорони здоров’я дитини'>
+                    <span class='econtent'>
+                        Визначення імені та/або прізвища дитини, яка знайдена, покинута в пологовому будинку, іншому закладі...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6408bc8d-dc27-4a51-9298-5ea6e26500d3' title='Визначення місця проживання малолітньої дитини.'>
+                    <span class='econtent'>
+                        Визначення місця проживання малолітньої дитини.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=0e1154b8-7687-48d3-b12b-b60eba1c44a9' title='Визначення способів участі у вихованні дитини того з батьків, хто проживає окремо від неї'>
+                    <span class='econtent'>
+                        Визначення способів участі у вихованні дитини того з батьків, хто проживає окремо від неї
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d384309a-e5a9-4f19-8ed2-3bac67def95f' title='Висновок державної експертизи землевпорядної документації щодо об’єктів, які підлягають обов'язковій (первинній, повторній, додатковій) державній експертизі'>
+                    <span class='econtent'>
+                        Висновок державної експертизи землевпорядної документації щодо об’єктів, які підлягають обов'язковій...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d0d949bc-24ef-4a2d-a426-f3545f8aabaf' title='Висновок державної санітарно – епідеміологічної експертизи документації на розроблювані техніку, технології, устаткування, інструменти тощо (ДЗ «Санітарно-епідеміологічна станція на Південно-Західній залізниці» МОЗ України)'>
+                    <span class='econtent'>
+                        Висновок державної санітарно – епідеміологічної експертизи документації на розроблювані техніку, тех...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=72e25c4b-dc18-4c73-b241-9392f150e209' title='Висновок державної санітарно – епідеміологічної експертизи документації на розроблювані техніку, технології, устаткування, інструменти тощо (Київська міська санітарно – епідеміологічна станція)'>
+                    <span class='econtent'>
+                        Висновок державної санітарно – епідеміологічної експертизи документації на розроблювані техніку, тех...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=7e0ed371-a01e-482b-934f-ff2d23de2806' title='Висновок державної санітарно – епідеміологічної експертизи на ввезення, реалізацію та використання сировини, продукції ( вироби, обладнання, технологічні лінії тощо) іноземного виробництва за умови відсутності даних щодо їх безпечності для здоров'я населе'>
+                    <span class='econtent'>
+                        Висновок державної санітарно – епідеміологічної експертизи на ввезення, реалізацію та використання с...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=83fbc43e-9151-429b-9833-2f2f63b4f3f7' title='Висновок державної санітарно – епідеміологічної експертизи щодо ввезення, реалізації та використання сировини, продукції ( вироби, обладнання, технологічні лінії тощо) іноземного виробництва за умови відсутності даних щодо їх безпечності для здоров’я насе'>
+                    <span class='econtent'>
+                        Висновок державної санітарно – епідеміологічної експертизи щодо ввезення, реалізації та використання...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=5e3ababd-6f25-448d-bc01-4a99ebcf0fa7' title='Включення/ виключення до/із складу службових житлових приміщень.'>
+                    <span class='econtent'>
+                        Включення/ виключення до/із складу службових житлових приміщень.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d8145fa8-f2da-4f8f-9e77-c5861896424a' title='Влаштування дитини до державного дитячого закладу за заявою батьків.'>
+                    <span class='econtent'>
+                        Влаштування дитини до державного дитячого закладу за заявою батьків.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=349e281b-67a7-4733-af60-d61bfc9130c4' title='Влаштування дітей-сиріт та дітей, позбавлених батьківського піклування до прийомної сім’ї/дитячого будинку сімейного типу.'>
+                    <span class='econtent'>
+                        Влаштування дітей-сиріт та дітей, позбавлених батьківського піклування до прийомної сім’ї/дитячого б...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=84cfb02a-4ab1-4fdd-9568-a1b19f4910e7' title='Внесення до паспорта громадянина України відмітки про наявність права здійснювати будь-які платежі за серією та номером паспорта'>
+                    <span class='econtent'>
+                        Внесення до паспорта громадянина України відмітки про наявність права здійснювати будь-які платежі з...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=2b74ccd6-05d0-4eb3-9287-a4769b94c74f' title='Внесення змін до облікових справ.'>
+                    <span class='econtent'>
+                        Внесення змін до облікових справ.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=c467521d-74c5-4796-abfb-c000af8ff967' title='Внесення змін до свідоцтва про право власності на житло.'>
+                    <span class='econtent'>
+                        Внесення змін до свідоцтва про право власності на житло.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=fd855df1-54dd-41b4-b01b-35b5af04ba7e' title='Внесення змін до свідоцтва про реєстрацію машини.'>
+                    <span class='econtent'>
+                        Внесення змін до свідоцтва про реєстрацію машини.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=360a1705-9bbe-4a74-b779-2e239554c5c6' title='Внесення змін до свідоцтва про реєстрацію машини.'>
+                    <span class='econtent'>
+                        Внесення змін до свідоцтва про реєстрацію машини.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=bab5342c-099a-4fa2-920f-2a77ba16f36e' title='Встановлення опіки/піклування над дітьми-сиротами та дітьми, позбавленими батьківського піклування'>
+                    <span class='econtent'>
+                        Встановлення опіки/піклування над дітьми-сиротами та дітьми, позбавленими батьківського піклування
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=cce24f16-10e8-4262-98bb-047e550a375c' title='Декларація про початок виконання будівельних робіт'>
+                    <span class='econtent'>
+                        Декларація про початок виконання будівельних робіт
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=22488b34-fc3d-4838-bf4b-bc59ed8f4e78' title='Декларація про початок виконання підготовчих робіт'>
+                    <span class='econtent'>
+                        Декларація про початок виконання підготовчих робіт
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=fb1a9955-7403-45ba-994d-83276706c98f' title='Державна реєстрація юридичної особи.'>
+                    <span class='econtent'>
+                        Державна реєстрація юридичної особи.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d6d86ec9-8abd-4593-8c33-2847f6a69565' title='Дозвіл на виконання будівельних робіт'>
+                    <span class='econtent'>
+                        Дозвіл на виконання будівельних робіт
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=48f28c35-9a31-4d70-95b6-5b6b989c0e12' title='Дозвіл на виконання геологічних вишукувань.'>
+                    <span class='econtent'>
+                        Дозвіл на виконання геологічних вишукувань.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=30efc39f-09ef-4138-a9a2-aa68c3861466' title='Дозвіл на право здійснення туристичного супроводу фахівцям туристичного супроводу у м. Києві.'>
+                    <span class='econtent'>
+                        Дозвіл на право здійснення туристичного супроводу фахівцям туристичного супроводу у м. Києві.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e06ad42f-b7ca-42de-8def-ed5ff7e72968' title='Дозвіл на проведення заходів із залученням тварин'>
+                    <span class='econtent'>
+                        Дозвіл на проведення заходів із залученням тварин
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=7895cd64-2c38-47b8-88f9-fe074728a2c8' title='Дозвіл на рух великогабаритних та великовагових транспортних засобів автомобільними дорогами, вулицями та залізничними переїздами'>
+                    <span class='econtent'>
+                        Дозвіл на рух великогабаритних та великовагових транспортних засобів автомобільними дорогами, вулиця...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6de87926-4421-4ff3-a7ae-06a4194c87f3' title='Експлуатаційний дозвіл для провадження діяльності на потужностях (об'єктах) з виробництва, змішування та приготування кормових добавок, преміксів і кормів'>
+                    <span class='econtent'>
+                        Експлуатаційний дозвіл для провадження діяльності на потужностях (об'єктах) з виробництва, змішуванн...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=de42cb98-3949-462f-946d-8487e94dfb91' title='Експлуатаційний дозвіл для провадження діяльності на потужностях (об'єктах) з переробки неїстівних продуктів тваринного походження'>
+                    <span class='econtent'>
+                        Експлуатаційний дозвіл для провадження діяльності на потужностях (об'єктах) з переробки неїстівних п...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=25a2a116-ea00-4f29-bd18-fb7682369e48' title='Експлуатаційний дозвіл операторам потужностей (об’єктів), які займаються виробництвом харчових продуктів, підконтрольних державній службі ветеринарної медицини та для агропродовольчих ринків'>
+                    <span class='econtent'>
+                        Експлуатаційний дозвіл операторам потужностей (об’єктів), які займаються виробництвом харчових проду...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=cd8e8e02-cefe-4cfc-8211-ac161d3d290e' title='Експлуатаційний дозвіл операторам потужностей (об'єктів), що здійснюють в Україні діяльність з виробництва та/або обігу харчових продуктів, підконтрольних санітарній службі (Київська міська санітарно – епідеміологічна станція/ДЗ «Санітарно-епідеміологічна'>
+                    <span class='econtent'>
+                        Експлуатаційний дозвіл операторам потужностей (об'єктів), що здійснюють в Україні діяльність з вироб...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=f34916b5-bcf8-47f3-944d-58ebda3cc916' title='Експлуатаційний дозвіл операторам потужностей (об'єктів), що здійснюють в Україні діяльність з виробництва та/або обігу харчових продуктів, підконтрольні санітарній службі (ДЗ «Київська лінійна санітарно-епідеміологічна станція на Південно-Західній залізн'>
+                    <span class='econtent'>
+                        Експлуатаційний дозвіл операторам потужностей (об'єктів), що здійснюють в Україні діяльність з вироб...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=a6be14fb-7b8d-4968-a6db-585641aa1452' title='Зарахування на облік громадян як потенційних опікунів/піклувальників'>
+                    <span class='econtent'>
+                        Зарахування на облік громадян як потенційних опікунів/піклувальників
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6065981a-23b1-44ab-beeb-4753ebc9388a' title='Зарахування на облік громадян як потенційних прийомних батьків/батьків-вихователів.'>
+                    <span class='econtent'>
+                        Зарахування на облік громадян як потенційних прийомних батьків/батьків-вихователів.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=c8c0ead1-c5f3-4869-8bf5-5022ff4c9fb1' title='Зарахування на облік кандидатів в усиновлювачі.'>
+                    <span class='econtent'>
+                        Зарахування на облік кандидатів в усиновлювачі.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4b94cbc3-1696-49bd-b6fd-fdcfca85ce35' title='Зарахування на соціальний квартирний облік'>
+                    <span class='econtent'>
+                        Зарахування на соціальний квартирний облік
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=0bb0c5c9-7222-4396-8a8e-e40703ee5362' title='Містобудівні умови і обмеження забудови земельної ділянки.'>
+                    <span class='econtent'>
+                        Містобудівні умови і обмеження забудови земельної ділянки.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=fd6d4f42-b011-4696-a88b-abb861316bc4' title='Надання акта обстеження житлово-побутових умов проживання дитини або одного з батьків.'>
+                    <span class='econtent'>
+                        Надання акта обстеження житлово-побутових умов проживання дитини або одного з батьків.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=58e131cb-185a-4525-9915-3a7a105c934c' title='Надання висновку про доцільність усиновлення та відповідність його інтересам дитини'>
+                    <span class='econtent'>
+                        Надання висновку про доцільність усиновлення та відповідність його інтересам дитини
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=bab59d50-9e16-4946-b36c-0466f6aae22f' title='Надання дозволу на зміну прізвища дитини.'>
+                    <span class='econtent'>
+                        Надання дозволу на зміну прізвища дитини.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6fa8c182-fee0-45a9-9007-d7b32c327dbc' title='Надання дозволу на зняття грошових коштів з банківського рахунку, що належить малолітній дитині.'>
+                    <span class='econtent'>
+                        Надання дозволу на зняття грошових коштів з банківського рахунку, що належить малолітній дитині.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=fa3c8fd4-ebad-4045-adaf-5fb7cc91fd3a' title='Надання дозволу на оформлення нотаріальних заяв, довіреностей від імені дитини'>
+                    <span class='econtent'>
+                        Надання дозволу на оформлення нотаріальних заяв, довіреностей від імені дитини
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=b658383e-2bdb-44fb-aab7-0bc05651aa89' title='Надання дозволу на укладення договору про припинення права на аліменти для дитини у зв’язку з набуттям права власності на нерухоме майно'>
+                    <span class='econtent'>
+                        Надання дозволу на укладення договору про припинення права на аліменти для дитини у зв’язку з набутт...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=1902acd8-94a6-4bfc-98d2-57345d69e653' title='Надання дозволу на укладення угод стосовно житла (майна), право власності на яке або право користування яким мають діти.'>
+                    <span class='econtent'>
+                        Надання дозволу на укладення угод стосовно житла (майна), право власності на яке або право користува...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4bbef44c-1bc7-42ab-8244-cb9980220af0' title='Надання дозволу на укладення угод стосовно продажу акцій та сертифікатів, право володіння якими мають діти.'>
+                    <span class='econtent'>
+                        Надання дозволу на укладення угод стосовно продажу акцій та сертифікатів, право володіння якими мают...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=c0de14d1-e45f-483d-8227-8173d6188538' title='Надання дозволу на укладення угоди стосовно розподілу спадкового майна, одним із спадкоємців якого є дитина.'>
+                    <span class='econtent'>
+                        Надання дозволу на укладення угоди стосовно розподілу спадкового майна, одним із спадкоємців якого є...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=188dd5c4-6f2b-4823-b7c2-53c52d9d5a80' title='Надання житла з фонду соціального призначення.'>
+                    <span class='econtent'>
+                        Надання житла з фонду соціального призначення.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=c4e251cb-1c82-4db5-9b49-b6a7be51cf09' title='Надання житлової площі, службових житлових приміщень та приєднання житлової площі та видача ордеру'>
+                    <span class='econtent'>
+                        Надання житлової площі, службових житлових приміщень та приєднання житлової площі та видача ордеру
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=d6e4f808-7ddf-40a4-9e2b-1782a408559e' title='Надання повної цивільної дієздатності фізичній особі, яка досягла шістнадцяти років і працює за трудовим договором, а також неповнолітній особі, яка записана матір’ю або батьком дитини.'>
+                    <span class='econtent'>
+                        Надання повної цивільної дієздатності фізичній особі, яка досягла шістнадцяти років і працює за труд...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=9cf61498-7bb2-409a-9c6d-2b9578d2a672' title='Облік громадян, які потребують поліпшення житлових умов (взяття на квартирний облік).'>
+                    <span class='econtent'>
+                        Облік громадян, які потребують поліпшення житлових умов (взяття на квартирний облік).
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=79dc1ce5-ec81-4563-9b91-ec8d299de436' title='Ордер на видалення аварійних та сухостійних дерев'>
+                    <span class='econtent'>
+                        Ордер на видалення аварійних та сухостійних дерев
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=8b5ddf78-9f25-455d-b52b-c1c4611f409f' title='Ордер на видалення зелених насаджень'>
+                    <span class='econtent'>
+                        Ордер на видалення зелених насаджень
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=095a500e-4333-4da3-8f91-b41867bd6a0c' title='Оформлення обміну житла та видача обмінних ордерів'>
+                    <span class='econtent'>
+                        Оформлення обміну житла та видача обмінних ордерів
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=b74994da-4d89-4b6a-b9e8-d0474974bff8' title='Оформлення свідоцтва про поховання'>
+                    <span class='econtent'>
+                        Оформлення свідоцтва про поховання
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=45df3564-503a-4f36-888d-e52290462b15' title='Оформлення свідоцтва про поховання'>
+                    <span class='econtent'>
+                        Оформлення свідоцтва про поховання
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=c47b651e-479f-4810-9619-4f85f6656dbe' title='Оформлення та видача ордерів'>
+                    <span class='econtent'>
+                        Оформлення та видача ордерів
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=ec7228fb-2274-4489-b84b-015dc6158816' title='Переведення житлового приміщення в нежитлове і навпаки'>
+                    <span class='econtent'>
+                        Переведення житлового приміщення в нежитлове і навпаки
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=2513dc5a-d403-4e8d-957c-70144852502c' title='Підготовка проекту розпорядження виконавчого органу Київської міської ради (Київської міської державної адміністрації) про надання дозволу на видалення зелених насаджень'>
+                    <span class='econtent'>
+                        Підготовка проекту розпорядження виконавчого органу Київської міської ради (Київської міської держав...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=60b23108-092e-4c57-b683-4cd28a7877bf' title='Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурної спадщини їхніми власниками чи уповноваженими ними органами іншим особам у володіння, користування або управління (відчуження (продаж, дарування))'>
+                    <span class='econtent'>
+                        Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурно...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e221aefc-bbab-4895-872e-e83ce43ae12e' title='Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурної спадщини їхніми власниками чи уповноваженими ними органами іншим особам у володіння, користування або управління (іпотека)'>
+                    <span class='econtent'>
+                        Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурно...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=cf0befac-442b-4d7b-85b5-3db57d600a3c' title='Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурної спадщини їхніми власниками чи уповноваженими ними органами іншим особам у володіння, користування або управління (оренда)'>
+                    <span class='econtent'>
+                        Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурно...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=5a9fc6fb-bbe8-4e7a-93a4-a783cf268568' title='Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурної спадщини їхніми власниками чи уповноваженими ними органами іншим особам у володіння, користування або управління (приватизація шляхом продажу на аукціоні'>
+                    <span class='econtent'>
+                        Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурно...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=1bcb3a9a-ca94-42eb-aea8-c4767835ae1f' title='Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурної спадщини їхніми власниками чи уповноваженими ними органами іншим особам у володіння, користування або управління (приватизація)'>
+                    <span class='econtent'>
+                        Погодження відчуження або передачі пам’яток місцевого значення та щойно виявлених об’єктів культурно...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=51a1a97c-8d25-40e2-b90c-16ca13210c65' title='Погодження клопотання водокористувачів з обґрунтуванням потреби у воді для отримання дозволу на спеціальне водокористування (в частині погодження клопотання водокористувачів з обґрунтуванням потреби у воді використання поверхневих вод в межах м. Києва)'>
+                    <span class='econtent'>
+                        Погодження клопотання водокористувачів з обґрунтуванням потреби у воді для отримання дозволу на спец...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e779b248-10f1-4270-8167-0b022359b518' title='Погодження проектів землеустрою щодо відведення земельних ділянок усіх категорій та форм власності'>
+                    <span class='econtent'>
+                        Погодження проектів землеустрою щодо відведення земельних ділянок усіх категорій та форм власності
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=947cf468-e912-41af-9b33-dbcec6743e3c' title='Призначення опіки над майном дітей-сиріт та дітей позбавлених батьківського піклування'>
+                    <span class='econtent'>
+                        Призначення опіки над майном дітей-сиріт та дітей позбавлених батьківського піклування
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=101ca854-a34b-40e2-8728-4d07b4ef3d67' title='Приймання іспиту на одержання посвідчення тракториста-машиніста.'>
+                    <span class='econtent'>
+                        Приймання іспиту на одержання посвідчення тракториста-машиніста.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=13d52a4f-17d0-4efe-ad02-b77006471399' title='Прийняття заяви на включення до переліку об'єктів, які підлягають приватизації ком. майна'>
+                    <span class='econtent'>
+                        Прийняття заяви на включення до переліку об'єктів, які підлягають приватизації ком. майна
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=de7b1950-bb7e-4e8a-b2ab-5fd95712a300' title='Прийняття заяви на приватизацію комунального майна'>
+                    <span class='econtent'>
+                        Прийняття заяви на приватизацію комунального майна
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=e839981f-dc5d-4d70-a318-35a72c9af574' title='Присвоєння будівельної адреси.'>
+                    <span class='econtent'>
+                        Присвоєння будівельної адреси.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=8436a368-3d93-41b1-8444-1a13ee199e96' title='Присвоєння поштових адрес окремо розташованим об’єктам будівництва та новозбудованим приватним житловим будинкам'>
+                    <span class='econtent'>
+                        Присвоєння поштових адрес окремо розташованим об’єктам будівництва та новозбудованим приватним житло...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=8365c1b6-737b-4953-b3b5-77ddf7531ee0' title='Присвоєння поштової адреси об’єкту нерухомого майна (окрім присвоєння поштової адреси багатоквартирним житловим будинкам, домоволодінням, жилим будинкам садибного типу, індивідуальним дачним та садовим будинкам, гаражним, садовим кооперативам)'>
+                    <span class='econtent'>
+                        Присвоєння поштової адреси об’єкту нерухомого майна (окрім присвоєння поштової адреси багатоквартирн...
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=72520be2-a542-446e-a790-81aa50d84ce3' title='Проведення огляду під час реєстрації, перереєстрації та зняття з обліку трактора, самохідного шасі, самохідної сільськогосподарської, меліоративної та дорожньо-будівельної машини'>
+                    <span class='econtent'>
+                        Проведення огляду під час реєстрації, перереєстрації та зняття з обліку трактора, самохідного шасі, ...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=0bb531bd-205c-4847-b4c4-4e4403643bd6' title='Проведення огляду під час реєстрації, перереєстрації та зняття з обліку тракторного причепа, інших причіпних машин'>
+                    <span class='econtent'>
+                        Проведення огляду під час реєстрації, перереєстрації та зняття з обліку тракторного причепа, інших п...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=b49dd0e8-bbdc-4f26-9f5e-9713f37ea836' title='Проведення річного державного технічного огляду машини, причепа.'>
+                    <span class='econtent'>
+                        Проведення річного державного технічного огляду машини, причепа.
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4fe1ae65-2631-4533-9955-3c7bbef0ef32' title='Проведення технічної експертизи, аналізу та Видача висновку про технічний стан машини, причепа, що стали непридатними внаслідок аварії чи стихійного лиха'>
+                    <span class='econtent'>
+                        Проведення технічної експертизи, аналізу та Видача висновку про технічний стан машини, причепа, що с...
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=544954f9-1d3c-4690-9197-ab14ff0119c1' title='Реєстрація документів, що посвідчують право власності чи користування (оренди) земельними ділянками.'>
+                    <span class='econtent'>
+                        Реєстрація документів, що посвідчують право власності чи користування (оренди) земельними ділянками.
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=4c266498-99b6-4e1c-b208-64d7468cdff3' title='Реєстрація машини, причепа з дня придбання яких минуло 10 днів'>
+                    <span class='econtent'>
+                        Реєстрація машини, причепа з дня придбання яких минуло 10 днів
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=6323a679-a85c-4d0c-abf8-0043c01927f9' title='Свідоцтво про атестацію калібрування засобів вимірювальної техніки та вимірювання'>
+                    <span class='econtent'>
+                        Свідоцтво про атестацію калібрування засобів вимірювальної техніки та вимірювання
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=30ae2b3a-4f9c-49ce-8bd8-ca075331f3dd' title='Сертифікат відповідність закінченого будівництва об'єкта'>
+                    <span class='econtent'>
+                        Сертифікат відповідність закінченого будівництва об'єкта
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=7afd6067-9003-4010-941d-9f15a154bd33' title='Скасування дії дозволу на розміщення зовнішньої реклами'>
+                    <span class='econtent'>
+                        Скасування дії дозволу на розміщення зовнішньої реклами
+                    </span>
+                </a>
+            </div></div><div class='hsItem'><div class='tit' title='&nbsp;'>&nbsp;</div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=aaea877e-dbf2-4aa8-885b-cb148e152a4b' title='Тимчасове обмеження руху транспорту'>
+                    <span class='econtent'>
+                        Тимчасове обмеження руху транспорту
+                    </span>
+                </a>
+            </div><div class='cl'></div>
+            <div class='emain' style='background-color:#00AEDD;'>
+                <a class='ecell' href='/AdminService/Details?id=a2b61ded-603c-45c0-91b7-90156d3ff551' title='Усиновлення дитини-сироти чи дитини, позбавленої батьківського піклування'>
+                    <span class='econtent'>
+                        Усиновлення дитини-сироти чи дитини, позбавленої батьківського піклування
+                    </span>
+                </a>
+            </div></div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/Scripts/cust/myHScroller.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#withscript').myHscroller(
+                {
+                    isMobileDevice: SafeParseBool('False')
+                    , contentUnderScrollWidth: parseFloat('12760')
+                });
+        });
+    </script>
+</div>
+
+<div class="cl"></div>
+
+
+    <div class="footer">
+        <script type="text/javascript" language="javascript">
+            var direction = -1;
+            var autoScroll = true;
+            var timeout = 10000;
+
+            $(document).ready(function () {
+                setTimeout(function () { MoveBanners(direction, true); }, timeout);
+            });
+        </script>
+
+        <ul id="bnrs">
+            <li>
+                <a class="bnr" target="_blank" href="http://www.president.gov.ua/" title="Президент України">
+                    <img src="/Images/tmp/bnrs/bnrPresident.png" alt="Президент України" />
+                    <span>Президент України
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a class="bnr" target="_blank" href="http://iportal.rada.gov.ua/" title="Верховна Рада України">
+                    <img src="/Images/tmp/bnrs/bnrVRU.png" alt="Верховна Рада України" />
+                    <span>Верховна Рада України
+                    </span>
+                </a>
+            </li>
+
+            
+
+            <li>
+                <a class="bnr" target="_blank" href="http://www.kmu.gov.ua" title="Урядовий портал">
+                    <img src="/Images/tmp/bnrs/bnrUryadoviyPortal.png" alt="Урядовий портал" />
+                    <span>Урядовий
+                        <br />
+                        портал
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a class="bnr" target="_blank" href="http://www.acrc.org.ua/" title="Антикорупційний портал">
+                    <img src="/Images/tmp/bnrs/bnrAntiKoruptsPortal.png" alt="Антикорупційний портал" />
+                    <span>Антикорупцій-
+                        <br />
+                        ний портал
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a class="bnr" target="_blank" href="http://www.me.gov.ua" title="Міністерство економічного розвитку і торгівлі України">
+                    <img src="/Images/tmp/bnrs/MinEconomicLogo.gif" alt="Міністерство економічного розвитку і торгівлі України" />
+                    <span>Мінеконом розвитку і торгівлі України
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a class="bnr" target="_blank" href="http://dndiime.org.ua" title="ДНДІ інформатизації та моделювання економіки">
+                    <img src="/Images/tmp/bnrs/bnrAntiKoruptsPortal.png" alt="ДНДІ інформатизації та моделювання економіки" />
+                    <span>ДНДІ інформатизації та моделюва...
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="pp">
+            <input type="button" onclick="MoveBanners(1, false);" value="" class="ppL" />
+            <input id="btnPp" type="button" onclick="PPbanners();" value="" class="ppP" />
+            <input type="button" onclick="MoveBanners(-1, false);" value="" class="ppR" />
+        </div>
+
+        <div class="copyright">
+            <div class="l">
+                Розроблено : Державним науково-дослідним інститутом
+                <br />
+                інформатизації та моделювання економіки на платформі DoCSoft
+            </div>
+            <div class="r">
+                &copy; Міністерство економічного розвитку і торгівлі України
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
