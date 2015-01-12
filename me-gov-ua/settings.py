@@ -24,3 +24,8 @@ CONCURRENT_ITEMS = 1
 CONCURRENT_REQUESTS_PER_DOMAIN = 1
 
 HTTPCACHE_IGNORE_HTTP_CODES = [403, 404, 500, 503]
+
+
+ITEM_PIPELINES = {
+    'me-gov-ua.pipelines.DuplicatesPipeline': 300,
+}
